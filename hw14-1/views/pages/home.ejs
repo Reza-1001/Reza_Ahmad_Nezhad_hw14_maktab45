@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <%- include("../partials/header") -%>
+    <h1>Home page</h1>
+    <div class="container">
+      <div class="mt-5 d-flex flex-row justify-content-between">
+        <% for ( let i = 0; i < data.length; i++ ) { %>
+        <div class="card mt-1">
+          <img class="card-img-top" src=<%= data[i].image %> alt="Card image cap">
+          
+          <div class="card-body">
+            <h5 class="card-title"><%= data[i].name %></h5>
+            <p class="card-text">Price: <%= data[i].price %> <span></span></p>
+            <p class="card-text">Size: <%= i %> <span></span></p>
+            <button id="" class="btn-user-profile btn btn-primary">
+              Show Profile
+            </button>
+          </div>
+        </div>
+        <% } %>
+      </div>
+    </div>
+  </body>
+</html>
