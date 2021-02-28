@@ -5,30 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
+   
   </head>
 
   <body>
     <%- include("../partials/header") -%>
-    <h1>Home page</h1>
+    
     <div class="container">
-      <div class="mt-5 d-flex flex-row justify-content-between">
+      <div class="mt-5 row">
         <% for ( let i = 0; i < data.length; i++ ) { %>
-        <div class="card mt-1">
-          <img class="card-img-top" src=<%= data[i].image %> alt="Card image cap">
+        <div class="card mt-1 col-4 text-right">
+          <img class="card-img-top mb-5" src=<%= data[i].image %> alt="Card image cap">
           
           <div class="card-body">
-            <h5 class="card-title"><%= data[i].name %></h5>
-            <p class="card-text">Price: <%= data[i].price %> <span></span></p>
-            <p class="card-text">Size: <%= i %> <span></span></p>
-            <button id="" class="btn-user-profile btn btn-primary">
-              Show Profile
-            </button>
+            <h5 class="card-title"><%= data[i]["discription"].name %></h5>
+            <p class="card-text">جنس: <%= data[i]["discription"].material %> </p>
+            <p class="card-text">سایز: <%= data[i]["discription"].size %> </p>
+            <p class="card-text">رنگ: <%= data[i]["discription"].colors %> </p>
+            
+           <form class="d-flex justify-content-between" action= <%= "/product" + i %> method="GET" >
+            <input type="submit" id=<%= i %> class="btn-user-profile btn-lg btn-success" value="خرید">
+            <p class="card-text"> <%= data[i]["discription"].price %> </p>
+           </form>
           </div>
         </div>
         <% } %>

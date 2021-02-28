@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <%- include("../partials/header") -%>
+    <div class="container">
+      <div class="mt-5 row">
+        <div class="card mt-1 col-4 text-right">
+          <img class="card-img-top mb-5" src=<%= data[id].image %> alt="Card image cap">
+          
+          <div class="card-body">
+            <h5 class="card-title"><%= data[id]["discription"].name %></h5>
+            <p class="card-text">جنس: <%= data[id]["discription"].material %> </p>
+            <p class="card-text">سایز: <%= data[id]["discription"].size %> </p>
+         
+          </div>
+        </div>
+       
+      </div>
+    </div>
+  </body>
+</html>

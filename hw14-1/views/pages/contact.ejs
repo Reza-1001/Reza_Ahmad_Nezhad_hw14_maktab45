@@ -4,8 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
-    <p> <%= data[0].name %> </p>
+<body class="text-right">
+    <%- include("../partials/header") -%>
+    <h3>ارتباط با ما</h3>
+
+<div class="container">
+  <form action="#">
+    <label for="fname">First Name</label>
+    <input class="contact_us" type="text" id="fname" name="firstname" placeholder="نام">
+
+    <label for="lname">Last Name</label>
+    <input class="contact_us" type="text" id="lname" name="lastname" placeholder="نام خانوادگی">
+
+    <label for="email">کشور</label>
+    <input class="contact_us" type="text" id="email" name="email" placeholder="ایمیل">
+
+
+    <label for="subject">موضوع</label>
+    <textarea class="contact_us" id="subject" name="subject" placeholder="متن پیغام ..." style="height:200px"></textarea>
+
+    <input class="contact_us" type="submit" value="ارسال">
+  </form>
+</div>
 </body>
 </html>

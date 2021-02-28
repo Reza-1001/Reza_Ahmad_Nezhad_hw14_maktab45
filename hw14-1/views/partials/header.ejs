@@ -1,20 +1,34 @@
-<<script src="https://kit.fontawesome.com/3ebeec4ad6.js" crossorigin="anonymous"></script>
-<link:cs></link:cs>
-<style>
-    ul {
-        min-width: 696px;
-        list-style: none;
-        padding-top: 20px;
-        }
-        ul li {
-            display: inline;
-            margin-left:10px;
-        }
-</style>
-<header style="direction:rtl;">
-   <ul >
-    <li><a href="home"><i class="fas fa-home"></i>خانه</a></li>
-    <li><a href="contact"><i class="fas fa-address-book"></i>تماس با ما</a></li>
-    <li><a href="about"><i class="fas fa-info"></i>درباره ما</a></li>
-   </ul>
-</header>
+<link
+rel="stylesheet"
+href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+crossorigin="anonymous"
+/>
+<nav class="navbar-expand-lg navbar navbar-dark bg-dark bg-aqua" style="direction:rtl">
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+        <ul class="navbar-nav ">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">خانه
+                    <span class="sr-only">(current)</span>
+                </a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/contact">تماس با ما
+                    <span class="sr-only">(current)</span>
+                </a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/about">درباره ما
+                    <span class="sr-only">(current)</span>
+                </a>
+            </li>
+            
+        </ul>
+       
+    </div>
+    <form class="form-inline my-2 my-lg-0" action="/" method="get">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" value="جستجو">جستجو</button>
+        <input class="form-control mr-sm-2" type="text" name="search" placeholder="جستجو" aria-label="Search">
+    </form>
+</nav>
